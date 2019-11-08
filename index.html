@@ -1,48 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Notification Example</title>
-
-    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script type="text/javascript" charset="utf-8">
-
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    // device APIs are available
-    //
-    function onDeviceReady() {
-        // Empty
-    }
-
-    // Show a custom alert
-    //
-    function showAlert() {
-        navigator.notification.alert(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
-        );
-    }
-
-    // Beep three times
-    //
-    function playBeep() {
-        navigator.notification.beep(3);
-    }
-
-    // Vibrate for 2 seconds
-    //
-    function vibrate() {
-        navigator.notification.vibrate(2000);
-    }
-
-    </script>
-  </head>
-  <body>
-    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
-  </body>
+ <head>
+ <meta http-equiv="Content-type" content="text/html;
+ charset=utf-8">
+ <meta name="viewport" id="viewport"
+ content="width=device-width, height=device-height,
+ initial-scale=1.0, maximum-scale=1.0,
+ user-scalable=no;" />
+ <script type="text/javascript" charset="utf-8"
+ src="phonegap.js"></script>
+ <script type="text/javascript" charset="utf-8">
+ function onBodyLoad() {
+ document.addEventListener("deviceready",onDeviceReady,
+ true);
+ }
+ function onDeviceReady() {
+ navigator.notification.alert("PhoneGap is ready!");
+ }
+ </script>
+ </head>
+ <body onload="onBodyLoad()">
+ <h1>HelloWorld2</h1>
+ <p>This is a sample PhoneGap application.</p>
+ <p>Integrante: <br>Guerrero Sandoval Edith Citlali.</p>
+ </body>
 </html>
